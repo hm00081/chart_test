@@ -16,7 +16,7 @@ function App() {
             <FinalSankey />
             {/* <ParentSize>{({ width, height }) => <StackedBarChart width={width} height={height} />}</ParentSize> */}
             {/* {draw} */}
-            {/* <ParentSize>{({ width, height }) => <Word width={width} height={height} />}</ParentSize> */}
+            <ParentSize>{({ width, height }) => <Word width={width} height={height} />}</ParentSize>
         </>
     );
 }

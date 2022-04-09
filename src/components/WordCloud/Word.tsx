@@ -10,6 +10,7 @@ const Wordclouds = styled.div`
     display: flex;
     flex-direction: column;
     user-select: none;
+    //padding-left: 50px;
 `;
 
 interface WordProps {
@@ -51,7 +52,7 @@ const words = wordFreq(Target);
 
 const fontScale = scaleLog({
     domain: [Math.min(...words.map((w) => w.value)), Math.max(...words.map((w) => w.value))],
-    range: [10, 100],
+    range: [10, 30],
 });
 
 const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
@@ -79,7 +80,15 @@ export default function Word({ width, height, showControls }: WordProps) {
                 >
                     {(cloudWords) =>
                         cloudWords.map((w, i) => (
-                            <Text key={w.text} fill={colors[i % colors.length]} textAnchor={'middle'} transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`} fontSize={w.size} fontFamily={w.font}>
+                            <Text
+                                style={{ fontWeight: 'bolder' }}
+                                key={w.text}
+                                fill={colors[i % colors.length]}
+                                textAnchor={'middle'}
+                                transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
+                                fontSize={w.size}
+                                fontFamily={w.font}
+                            >
                                 {w.text}
                             </Text>
                         ))

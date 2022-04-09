@@ -1,107 +1,67 @@
 export const Target = `
-Opinion Opinion Opinion Opinion
-Evaluation Evaluation Evaluation Evaluation Evaluation
-Emotion Emotion Emotion Emotion
-Tweets Tweets Tweets Tweets
-Writer
-Writing
-Incident
+Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets
+News News News News News News News News News
+Writer Writer Writer Writer Writer Writer Writer Writer Writer
+Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages Accumulation_of_tweet_messages
+Politician Politician Politician Politician Politician Politician Politician Politician
+Posting Posting Posting Posting Posting Posting Posting Posting
+Media Media Media Media Media Media Media Media
+Article Article Article Article Article Article Article Article
+Service Service Service Service Service Service Service
+Product Product Product Product Product Product Product
+Electronic devices Electronic devices Electronic devices Electronic devices Electronic devices Electronic devices Electronic devices
+Bank Bank Bank Bank Bank Bank
+Comments Comments Comments Comments Comments Comments
+Satisfaction level Satisfaction level Satisfaction level Satisfaction level Satisfaction level Satisfaction level
+iPhone iPhone iPhone iPhone iPhone iPhone
+Retweet Retweet Retweet Retweet Retweet Retweet
+Diffusion Diffusion Diffusion Diffusion Diffusion Diffusion
+Flow Flow Flow Flow Flow
+Blog Blog Blog Blog Blog
+US_presidential_election US_presidential_election US_presidential_election US_presidential_election US_presidential_election
+Romney Romney Romney Romney Romney
+Obamas Obamas Obamas Obamas Obamas
+Debate Debate Debate Debate Debate
+Trump Trump Trump Trump Trump
+Hillary Hillary Hillary Hillary Hillary
+Candidate Candidate Candidate Candidate Candidate
+Video Video Video Video
+Community Community Community Community
+Civilian Civilian Civilian Civilian
+Polarity Polarity Polarity Polarity
 Time Time Time Time
-Article Article Article
-Accumulation
-the subject
-Height
-People
-User
-Service
-Start
-Writer Writer Writer
-Subject Subject  Subject
-Continuity
-extinction
-reduction in size
-the product
-Growth
-Word
-Place
-Player
-Relevant
-Target
-Posting
-the Grand National Party
-Property
-Position
-Topic
-an accident
-Attitude
-Process
-Article
-User
-Combined
-Expression
-Retweet
-Period
-Collection
-Community
-Mention
-Debate
-Specific
-Psychology
-Review
-Change
-writing out
-Repetition
-Ordinary person
-Group
-Comments
-Bank
-Candidate
-Text
-Sharing
-Continuous
-Behavior
-Politician
-Several
-Record
-Blog
-Comments
+Record Record Record
+Democrats Democrats Democrats
+Republican Republican Republican
+Review Review Review
+Galaxy Galaxy Galaxy
+Expression Expression
+Collection Collection
+Mention Mention
+Specific Specific
+Psychology Psychology
+Topic Topic
+Change Change
+Writing Writing
+Group Group
+Comments Comments
+Text Text
+Sharing Sharing
+Continuous Continuous
+Behavior Behavior
 Pattern
 Personality
 Message
 Progress
-Diffusion
-Electronic devices
 Frequency
-Video
-Flow
-long axis
-Appearance
-Data
-Romney
-Information
-Water
-The Obamas
 Event
 Photographs
-vocabulary
-News
-the United States
-Post
 Social
-polarity
-Trump
 meeting
 Celebrity
-Teg
 implication
-Hash
 Occurrence
-therefore
-Including
-Satisfaction level
-Utilization
 Scene
-Media
 `;
 
 export const Intermediation = `
