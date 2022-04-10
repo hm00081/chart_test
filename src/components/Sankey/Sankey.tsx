@@ -15,7 +15,9 @@ import { Papers } from '../../data/AllPaperData';
 import { couldStartTrivia } from 'typescript';
 import { GridColumns } from '@visx/grid';
 
-const Links = styled.path``;
+const SankeySize = styled.svg`
+    margin-top: 1.5em;
+`;
 
 const Text = styled.div`
     flex: 1;
@@ -109,7 +111,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
     // const columns = title.map((title) => title).filter((title, pos, arr) => arr.indexOf(title) === pos);
 
     return (
-        <svg width={width} height={height}>
+        <SankeySize width={width} height={height}>
             <LinkGrayColor />
             <LinkBlueColor />
             <LinkDeepBlueColor />
@@ -133,6 +135,6 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
                 // @ts-ignore
                 <Node className="node" key={`node-${i}`} node={node} width={width} height={height} originData={originData} setOriginData={setOriginData} /> // 노드도 그래프용 데이터가 필요할듯하다.
             ))}
-        </svg>
+        </SankeySize>
     );
 };

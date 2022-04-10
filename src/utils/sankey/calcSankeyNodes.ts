@@ -118,21 +118,21 @@ export const calcSankeyNodes = (
             if (node.type === 'Target' && node.subtype === '2') extendedNode.y = currYPos + 5;
             if (node.type === 'Target' && node.subtype === '3') extendedNode.y = currYPos + 20;
             if (node.type === 'Target' && node.subtype === '4') extendedNode.y = currYPos + 35;
-            if (node.type === 'Target') extendedNode.x = columnXPos + currXPos * 3.0;
+            if (node.type === 'Target') extendedNode.x = columnXPos + currXPos * 3.4;
             if (node.type === 'Intermediation' && node.subtype === '0') extendedNode.y = currYPos - 200;
             if (node.type === 'Intermediation' && node.subtype === '1') extendedNode.y = currYPos - 170;
             if (node.type === 'Intermediation' && node.subtype === '2') extendedNode.y = currYPos - 140;
             if (node.type === 'Intermediation' && node.subtype === '3') extendedNode.y = currYPos - 110;
             if (node.type === 'Intermediation' && node.subtype === '4') extendedNode.y = currYPos - 80;
-            if (node.type === 'Intermediation') extendedNode.x = columnXPos + currXPos * 1.05;
+            if (node.type === 'Intermediation') extendedNode.x = columnXPos + currXPos * 1.15;
             if (node.type === 'Representation' && node.subtype === '0') extendedNode.y = currYPos - 70;
             if (node.type === 'Representation' && node.subtype === '1') extendedNode.y = currYPos - 50;
             if (node.type === 'Representation' && node.subtype === '2') extendedNode.y = currYPos - 30;
             if (node.type === 'Representation' && node.subtype === '3') extendedNode.y = currYPos - 10;
-            if (node.type === 'Representation') extendedNode.x = columnXPos + currXPos * 1.7;
-            if (node.type === 'Vis_var&tech' && node.subtype === '0') extendedNode.y = currYPos - 80;
-            if (node.type === 'Vis_var&tech' && node.subtype === '1') extendedNode.y = currYPos - 30;
-            if (node.type === 'Vis_var&tech') extendedNode.x = columnXPos * 1.22;
+            if (node.type === 'Representation') extendedNode.x = columnXPos + currXPos * 1.6;
+            if (node.type === 'Vis_var&tech' && node.subtype === '0') extendedNode.y = currYPos - 200;
+            if (node.type === 'Vis_var&tech' && node.subtype === '1') extendedNode.y = currYPos + 120;
+            if (node.type === 'Vis_var&tech') extendedNode.x = columnXPos * 1.2;
 
             // Filter Nodes with no output that or not end nodes
 

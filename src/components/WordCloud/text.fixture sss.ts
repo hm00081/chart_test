@@ -1,6 +1,9 @@
 import { WordCloudData } from '../../types/sankey/index';
 
-export const Target = `Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets
+export const Target: WordCloudData = {
+    words: [
+        {
+            word: `Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets Tweets
 News News News News News News News News News News News News News
 Writer Writer Writer Writer Writer Writer Writer Writer Writer Writer Writer
 Tweet_accumulation Tweet_accumulation Tweet_accumulation Tweet_accumulation Tweet_accumulation Tweet_accumulation Tweet_accumulation Tweet_accumulation
@@ -61,9 +64,16 @@ meeting
 Celebrity
 implication
 Occurrence
-Scene`;
+Scene`,
+        },
+    ],
+    types: [{ type: 'Target' }],
+};
 
-export const Intermediation = `Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products
+export const Intermediation: WordCloudData = {
+    words: [
+        {
+            word: `Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products Products
 Comparison Comparison Comparison Comparison Comparison Comparison Comparison Comparison Comparison Comparison Comparison Comparison
 Polarity Polarity Polarity Polarity Polarity Polarity Polarity Polarity Polarity Polarity Polarity Polarity
 Service_evaluation Service_evaluation Service_evaluation Service_evaluation Service_evaluation Service_evaluation Service_evaluation Service_evaluation
@@ -111,9 +121,16 @@ Evidence
 Processing
 Publishing
 Utilization
-Growth`;
+Growth`,
+        },
+    ],
+    types: [{ type: 'Intermediation' }],
+};
 
-export const Representation = `River River River River River River River River River River River River River River River River River River River River River River  River River River River
+export const Representation: WordCloudData = {
+    words: [
+        {
+            word: `River River River River River River River River River River River River River River River River River River River River River River  River River River River
 Riverflow Riverflow Riverflow Riverflow Riverflow Riverflow Riverflow Riverflow Riverflow Riverflow
 Cascade Cascade Cascade Cascade Cascade Cascade Cascade Cascade Cascade Cascade Cascade
 Lake Lake Lake Lake Lake Lake Lake Lake Lake
@@ -155,9 +172,16 @@ Emoji
 Territory
 Ring
 Stem
-Electrocardiography`;
+Electrocardiography`,
+        },
+    ],
+    types: [{ type: 'Representation' }],
+};
 
-export const Visvar = `Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red
+export const Visvar: WordCloudData = {
+    words: [
+        {
+            word: `Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red Red
 Negative Negative Negative Negative Negative Negative Negative Negative Negative Negative Negative Negative Negative Negative
 Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue Blue
 Positive Positive Positive Positive Positive Positive Positive Positive Positive Positive Positive Positive Positive Positive
@@ -191,9 +215,16 @@ Score Score
 Height
 Participant
 Brand
-Topic`;
+Topic`,
+        },
+    ],
+    types: [{ type: 'Visvar' }],
+};
 
-export const Vistech = `Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud
+export const Vistech: WordCloudData = {
+    words: [
+        {
+            word: `Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud Wordcloud
 Major_opinion Major_opinion Major_opinion Major_opinion Major_opinion Major_opinion  Major_opinion Major_opinion  Major_opinion Major_opinion Major_opinion Major_opinion Major_opinion
 Areachart Areachart Areachart Areachart Areachart Areachart Areachart Areachart Areachart Areachart Areachart Areachart
 Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount Amount
@@ -224,4 +255,8 @@ Deposition Deposition
 Trace Trace
 Occurrence Occurrence
 Stack Stack
-Cluster Cluster`;
+Cluster Cluster`,
+        },
+    ],
+    types: [{ type: 'Visvar' }],
+};

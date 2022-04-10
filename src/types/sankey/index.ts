@@ -83,9 +83,22 @@ export type SankeyStatus = {
     // status: string | number | number[];
 };
 
-export type SankeyWord = {
-    status: string | string[];
+export type WordType = {
+    type: string;
 };
+
+export type Word = {
+    word: string;
+};
+
+export type WordText = {
+    word: string;
+};
+
+export interface WordCloudData {
+    words: WordText[] | string;
+    types: WordType[];
+}
 
 export interface SankeyData {
     nodes: SankeyNode[];

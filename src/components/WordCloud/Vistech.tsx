@@ -2,21 +2,44 @@ import React, { useState } from 'react';
 import { Text } from '@visx/text';
 import { scaleLog } from '@visx/scale';
 import { Wordcloud } from '@visx/wordcloud';
-import { Target } from './text.fixture';
+import { Target, Intermediation, Representation, Visvar, Vistech } from './text.fixture';
 import { totoAfricaLyricss } from './text.fixtures';
 import styled from 'styled-components';
 import { LinkColor, SankeyData } from '../../types/sankey';
-import Intermediation from './Intermediation';
-import ParentSize from '@visx/responsive/lib/components/ParentSizeModern';
 
 const Wordclouds = styled.div`
     display: flex;
-    height: auto;
     flex-direction: column;
     user-select: none;
-    padding-right: 550px;
-    padding-top: -320px;
 `;
+
+// const Wordcloudss = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     user-select: none;
+//     padding-bottom: 450px;
+// `;
+
+// const Wordcloudsss = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     user-select: none;
+//     margin-bottom: 450px;
+// `;
+
+// const Wordcloudssss = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     user-select: none;
+//     padding-bottom: 450px;
+// `;
+
+// const Wordcloudsssss = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     user-select: none;
+//     padding-bottom: 450px;
+// `;
 
 interface WordProps {
     width: number;
@@ -51,22 +74,27 @@ function getRotationDegree() {
     return rand * degree;
 }
 
-// const words = wordFreq(Target.words as string);
-const words = wordFreq(Target);
-console.log(words);
+// const wordsssss = wordFreq(Vistech.words as string);
+const wordsssss = wordFreq(Vistech);
+
+const colors = () => {
+    let color: string = '' as const;
+    wordsssss.forEach((word) => {
+        if (word.value > 10) {
+            color = 'hsl(210, 80%, 55%)';
+        } else color = 'hsl(253, 86%, 38%)';
+    });
+    return color;
+}; // select color
 
 const fontScale = scaleLog({
-    domain: [Math.min(...words.map((w) => w.value)), Math.max(...words.map((w) => w.value))],
-    range: [5, 32],
+    domain: [Math.min(...wordsssss.map((w) => w.value)), Math.max(...wordsssss.map((w) => w.value))],
+    range: [5, 30],
 });
 
 const setColor = (words: WordData[]) => {};
 
 const fontSizeSetter = (datum: WordData) => fontScale(datum.value);
-
-const fontColorSetter = (datum: WordData) => {
-    console.log(datum.value);
-};
 
 const fixedValueGenerator = () => 0.5;
 
@@ -79,14 +107,14 @@ export default function Word({ width, height, showControls }: WordProps) {
         <div className="wordcloud">
             <Wordclouds>
                 <Wordcloud
-                    words={words}
+                    words={wordsssss}
                     width={width / 4}
                     height={height}
                     fontSize={fontSizeSetter}
                     font={'Helvetica'}
                     padding={2.5}
                     spiral={'archimedean'}
-                    rotate={withRotation ? getRotationDegree : 1}
+                    rotate={withRotation ? getRotationDegree : 0}
                     random={fixedValueGenerator}
                 >
                     {(cloudWords) =>
@@ -94,7 +122,7 @@ export default function Word({ width, height, showControls }: WordProps) {
                             <Text
                                 style={{ fontWeight: 'bolder' }}
                                 key={w.text}
-                                fill={words[i].value >= 5 ? 'hsl(110, 50%, 55%)' : 'hsl(10, 0%, 85%)'}
+                                fill={wordsssss[i].value >= 7 ? 'hsl(353, 86%, 38%)' : 'hsl(10, 0%, 85%)'}
                                 textAnchor={'middle'}
                                 transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
                                 fontSize={w.size}
