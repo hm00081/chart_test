@@ -14,6 +14,7 @@ import styled from 'styled-components';
 import { Papers } from '../../data/AllPaperData';
 import { couldStartTrivia } from 'typescript';
 import { GridColumns } from '@visx/grid';
+import { link } from 'fs';
 
 const SankeySize = styled.svg`
     margin-top: 1.5em;
@@ -44,7 +45,7 @@ interface Props {
 
 export interface SourceTargetIdLinksDict {
     [sourceTargetId: string]: SankeyLink[];
-}
+} // 딕셔너리를 만들기 위한 인터페이스 구조.
 
 export interface SourceTargetIdNodesDict {
     [sourceTargetId: string]: SankeyNode[];
@@ -62,6 +63,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
     useEffect(() => {
         const sourceTargetIdLinksDict: SourceTargetIdLinksDict = {};
         const SourceTargetIdNodesDict: SourceTargetIdNodesDict = {};
+        // node에는 링크정보가 없고 링크에만 노드의 정보만 있는 상태.
 
         originData.links.forEach((link1) => {
             originData.links.forEach((link2) => {
@@ -91,6 +93,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
             );
             mergedLinks.push(mergedLink);
         }
+        console.log(mergedLinks);
 
         const renderingData: SankeyData = { ...originData };
         renderingData.links = mergedLinks;
@@ -100,6 +103,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
         const nodes = calcSankeyNodes(renderingData, width, height, paddingTop, paddingLeft, nodeWidth, nodeHeight, nodeMargin, maxLinkBreadth);
         // console.log('nodes', nodes);
         setNodes(nodes);
+        console.log(nodes);
         // const links = calcSankeyLinks(renderingData, height, nodes, nodeWidth, minLinkBreadth, maxLinkBreadth, renderingData.positionStatus === 'init'); // 이거로 하면 모든 링크 위치 분리되어 나타냄
         const links = calcSankeyLinks(renderingData, height, nodes, nodeWidth, minLinkBreadth, maxLinkBreadth);
         const columns = nodes.map((node) => node.type).filter((type, pos, arr) => arr.indexOf(type) === pos);

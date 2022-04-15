@@ -82,13 +82,13 @@ export const Node = ({ node, width, height, originData, sourceTargetIdLinksDict,
                 fill={node.color}
                 onClick={() => {
                     console.log('originData', originData);
-                    const renderingData: SankeyData = { ...originData };
+                    const renderingData: SankeyData = { ...originData }; // 깊은 복사
                     renderingData.positionStatus = 'clicked';
                     renderingData.links = renderingData.links.map((link) => {
                         return { ...link };
                     });
                     const selectedLinkParts = sourceTargetIdLinksDict[`${link.source}-${link.target}-${link.valueid}`];
-
+                    console.log(renderingData);
                     renderingData.links.forEach((renderingLink) => {
                         renderingLink.color = 'grayLinkColor';
                         renderingLink.valueid = undefined; // 초기 상태

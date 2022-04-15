@@ -107,7 +107,7 @@ export const Link = ({ link, originData, sourceTargetIdLinksDict, setOriginData 
                     });
 
                     const selectedLinkParts = sourceTargetIdLinksDict[`${link.source}-${link.target}-${link.valueid}`];
-
+                    console.log(renderingData);
                     renderingData.links.forEach((renderingLink) => {
                         renderingLink.color = 'grayLinkColor';
                         renderingLink.valueid = undefined; // 초기 상태

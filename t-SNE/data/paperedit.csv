@@ -1,0 +1,63 @@
+﻿,TargetCount,Target,,IntermediationCount,Intermediation,,RepresentationCount,Representation,,VisvarCount,Visvar,,VistechCount,Vistech
+트윗,10,Tweets ,제품,10,Products,강,10,River,빨강,10,Red,워드클라우드,9,Word_Cloud
+뉴스,9,News,비교,10,Comparison,강물의흐름,9,Riverflow,부정,10,Negative,주요 의견,9,Major_opinion
+작성자,9,Writer,극성,10,Polarity ,폭포,9,Cascade,파랑,10,Blue,요약,9,Summary
+트윗의 축적,8,Accumulation_of_tweet,서비스에대한평가,10,Appraisals_for_services,호수,9,Lake,긍정,10,Positive,면척차트,8,Area_chart
+정치인,8,Politician,리뷰 ,9,Reviews,다리,8,Bridge,감정의극성,9,Polarity_of_emotion,양,8,Amount
+포스팅,8,Posting,발언,9,Remarks,원,8,Circle,의견빈도,9,Frequency_of_opinion,변화량,8,Variance
+미디어,8,Media,요약,9,Summary,파도,8,Wave,평가빈도,9,Frequency_of_appraisal,다양한공간,7,Various_spaces
+기사,8,Article,분석,8,Analysis,지류,8,Tributary,강물의색상,9,Color_of_river,의견확산,7,Diffusion_of_opinions
+서비스,7,Service,기간별트윗,8,Tweets_by_period,경관,7,Landscape,강의폭,9,Width_of_river,3차원,7,3D
+제품,7,Product,논쟁요약,8,Summary_of_argumentation,자연,7,Nature,크기,9,Size,기간,6,Period
+전자기기,7,Electronic_devices,정치인비교,8,Comparison_of_politicians,순수,7,Pure,극성의강도,9,Intensity_of_polarity,날짜,6,Date
+댓글,6,Comments,시간에따른,7,Over_time,퇴적,7,Sedimentary_layer,자주사용되는키워드,9,Frequently_used,시계열,5,Timeline
+만족도,6,Satisfaction_level,쉬운,6,Easy,낙차,7,Head,자주사용되는키워드,9,Keywords,정리,5,Arrangement
+아이폰,6,iPhone,탐색,6,Exploration,등고선,7,Contour,강의위치,9,Position_of_River,평가 요약,4,Summary_of_appraisal
+리트윗,6,Retweet,감정,6,Emotional,사각형,5,Square,비슷한감정어,9,Similar_words,다이어그램,3,Diagram
+확산,6,Diffusion,어휘,6,Words,기하,5,Ceometry,근접하게,9,Closely,파이,2,Pie
+흐름,5,Flow,소셜미디어,6,Social_Media,도형,5,Shapes,위치,8,Position,라인,2,Line
+블로그,5,Blog,분열,6,Divergence,거품,5,Bubble,주황,5,Orange,포함,2,Include
+미국대선,5,US_presidential_election,중요한트윗,6,Significant_tweet,물질,4,Substance,초록,5,Green,산점도,1,Scatterplot
+롬니,5,Romney,사용자,5,User,식물,4,Plants,노랑,4,Yellow,행동,1,Behavior
+오바마,5,Obamas,빈도,5,Frequency,워드,4,Word,폭포의높이,4,Waterfall's_height,계층,1,Hierarchy
+토론,5,Debate,인플루언서,4,Influencer,화합물,4,Compound,최근기사,4,Latest_articles,포스팅,1,Posting
+트럼프,5,Trump,찾기,4,Find,가지,4,Branch,과거기사,4,Past_articles,표시,1,Display
+힐러리,5,Hillary,추이,3,Trend,나무,4,Tree,정치인,3,Politician,대상,1,Target
+후보,5,Candidate,데이터 흐름,3,Data_flow,건축물,3,Building,패턴,3,Pattern,기록,1,Record
+영상,4,Video,변화,3,Change,무늬,3,Pattern,중립,3,neutrality,관계,1,Relationship
+커뮤니티,4,Community,포스팅,3,Posting,기계류,3,Machine,패턴,3,Pattern,노드-링크,1,Node_link
+일반인,4,General Public,측면,3,aspect,감정바퀴,3,Emotion_wheel,넓이,3,Area,퇴적,2,Deposition
+극성,4,polarity,관계,3,Relationship,괴테휠,3,Goethe_wheel,언급,2,Mention,추적,1,Trace
+시간,4,Time,코멘트,3,Comments,기타,3,Article,결정,2,Decision,발생,1,Occurrence
+기록,3,Record,기간,3,Period,장식,2,Decoration,포함,2,Including,스택,1,Stack
+민주당,3,Democrats,묘사,2,Description,기록,2,Record,이벤트,2,Event,군집,1,Cluster
+공화당,3,Republican,댓글,2,Comments,지도,2,Map,점수,2,Score,,,
+리뷰,3,Review,축적,2,Accumulation,꽃,2,Flower,높이,1,Height,,,
+갤럭시,3,Galaxy,루머,2,Rumor,휠,2,Wheels,참가자,1,Participant,,,
+표현,2,Expression,논쟁,2,Argument,꽃잎,2,Petal,브랜드,1,Brand,,,
+수집,2,Collection,분류,2,Classification,나뭇잎,2,Leaves,주제,1,Topic,,,
+언급,2,Mention,대상,2,Target,선,1,Line,,,,,,
+특정,2,Specific,유저,2,User,이모지,1,Emoji,,,,,,
+심리,2,Psychology,파악,2,Realize,영토,1,Territory,,,,,,
+주제,2,Topic,확산,1,Diffusion,링,1,Ring,,,,,,
+변화,2,Change,탐지,1,Detection,줄기,1,Stem,,,,,,
+작성,2,writing out,활동,1,Activity,심전도,1,Electrocardiography,,,,,,
+단체,2,Group,기록,1,Record,,,,,,,,,
+코멘트,2,Comments,증거,1,Evidence,,,,,,,,,
+텍스트,2,Text,처리,1,Processing,,,,,,,,,
+공유,2,Sharing,게시,1,Publishing,,,,,,,,,
+연속,2,Continuous,이용,1,Utilization,,,,,,,,,
+행동,2,Behavior,성장,1,Growth,,,,,,,,,
+패턴,1,Pattern,,,,,,,,,,,,
+성격,1,Personality,,,,,,,,,,,,
+메시지,1,Message,,,,,,,,,,,,
+진행,1,Progress,,,,,,,,,,,,
+빈도,1,Frequency,,,,,,,,,,,,
+이벤트,1,Event,,,,,,,,,,,,
+사진,1,Photographs,,,,,,,,,,,,
+소셜,1,Social,,,,,,,,,,,,
+회의,1,meeting,,,,,,,,,,,,
+유명인,1,Celebrity,,,,,,,,,,,,
+함축,1,implication,,,,,,,,,,,,
+발생,1,Occurrence,,,,,,,,,,,,
+장면,1,Scene,,,,,,,,,,,,
