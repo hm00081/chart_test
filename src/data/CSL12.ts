@@ -8,6 +8,7 @@ export const CSL12: SankeyData = {
             source: 102,
             target: 11,
             value: 2,
+            valueid: ['repa', 'repc'],
         },
         {
             source: 102,

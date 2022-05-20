@@ -243,6 +243,7 @@ const test = () => {
     return paper;
 };
 const Status = test();
+console.log(PaperString[2][0].valueid);
 // console.log(Object.values(status[0][0]));
 //@ts-ignore
 // const c = [].concat.apply([], [status]);
