@@ -93,7 +93,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
             );
             mergedLinks.push(mergedLink);
         }
-        console.log(mergedLinks);
+        // console.log(mergedLinks);
 
         const renderingData: SankeyData = { ...originData };
         renderingData.links = mergedLinks;
@@ -103,7 +103,7 @@ export const Sankey = ({ width, height, originData, paddingTop = 0, paddingLeft 
         const nodes = calcSankeyNodes(renderingData, width, height, paddingTop, paddingLeft, nodeWidth, nodeHeight, nodeMargin, maxLinkBreadth);
         // console.log('nodes', nodes);
         setNodes(nodes);
-        console.log(nodes);
+        // console.log(nodes);
         // const links = calcSankeyLinks(renderingData, height, nodes, nodeWidth, minLinkBreadth, maxLinkBreadth, renderingData.positionStatus === 'init'); // 이거로 하면 모든 링크 위치 분리되어 나타냄
         const links = calcSankeyLinks(renderingData, height, nodes, nodeWidth, minLinkBreadth, maxLinkBreadth);
         const columns = nodes.map((node) => node.type).filter((type, pos, arr) => arr.indexOf(type) === pos);

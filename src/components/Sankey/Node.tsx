@@ -63,6 +63,9 @@ export const Node = ({ node, width, height, originData, sourceTargetIdLinksDict,
     const textValueSize = (size / 100) * 1;
     let textXPosition = textX + textMargin + node.width * 0.3;
     let textYPosition = node.y + node.value / 2 + textMargin * 1;
+    // const [links, setLinks] = useState<SankeyLinkExtended>([]);
+    // console.log(links);
+    //현재 link 데이터는 제대로 불러와지지 않노
 
     if (node.type === 'Vis_var&tech') {
         textXPosition = textX + textMargin;
@@ -72,7 +75,7 @@ export const Node = ({ node, width, height, originData, sourceTargetIdLinksDict,
     }
 
     return (
-        //노드에 link와 같이 클릭시 노드에 있는 링크들만 보여주도록 표현.
+        //노드에 link와 같이 클릭시 노드에 있는 링크들만 보여주도록 표현
         <NodePos>
             <rect
                 x={node.x}
@@ -81,14 +84,18 @@ export const Node = ({ node, width, height, originData, sourceTargetIdLinksDict,
                 height={node.value}
                 fill={node.color}
                 onClick={() => {
-                    console.log('originData', originData);
                     const renderingData: SankeyData = { ...originData }; // 깊은 복사
                     renderingData.positionStatus = 'clicked';
+                    renderingData.nodes = renderingData.nodes.map((node) => {
+                        return { ...node };
+                    });
+                    console.log(renderingData.nodes);
                     renderingData.links = renderingData.links.map((link) => {
                         return { ...link };
                     });
+                    console.log(renderingData.links);
                     const selectedLinkParts = sourceTargetIdLinksDict[`${link.source}-${link.target}-${link.valueid}`];
-                    console.log(renderingData);
+
                     renderingData.links.forEach((renderingLink) => {
                         renderingLink.color = 'grayLinkColor';
                         renderingLink.valueid = undefined; // 초기 상태
@@ -112,7 +119,7 @@ export const Node = ({ node, width, height, originData, sourceTargetIdLinksDict,
                             }
                         });
                     });
-
+                    // console.log('renderingData', renderingData);
                     selectedLinkParts.forEach((selectedLinkPart) => {
                         findFrontLinks({
                             linkPart: selectedLinkPart,
