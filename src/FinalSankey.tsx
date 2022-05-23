@@ -12,7 +12,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Data & Hooks
 import { useState, useEffect, useRef, useReducer } from 'react';
-import { basicData, targetaa, targetab, targetba, targetbb, targetca, repa, repb, repc, repd, repea, repeb, repf, empty } from './Data';
+import { basicData, targetaa, targetab, targetba, targetbb, targetca, repa, repb, repc, repd, repea, repeb, repf, repg, empty } from './Data';
 import { SankeyData, SankeyLinkExtended, SankeyNodeExtended, SankeyLink } from './types';
 import { ButtonGroup } from '@mui/material';
 const FinalSankeys = styled.div`
@@ -74,19 +74,19 @@ const theme = createTheme({
 // Component
 export default function FinalSankey() {
     const [ref, { width, height }] = useMeasure<HTMLDivElement>();
-    const [taa, setTaa] = useState(0);
-    const [tab, setTab] = useState(0);
-    const [tba, setTba] = useState(0);
-    const [tbb, setTbb] = useState(0);
-    const [tca, setTca] = useState(0);
-    const [ra, setRa] = useState(0);
-    const [rb, setRb] = useState(0);
-    const [rc, setRc] = useState(0);
-    const [rd, setRd] = useState(0);
-    const [rea, setRea] = useState(0);
-    const [reb, setReb] = useState(0);
-    const [rf, setRf] = useState(0);
-    const [full, setFull] = useState(0);
+    // const [taa, setTaa] = useState(0);
+    // const [tab, setTab] = useState(0);
+    // const [tba, setTba] = useState(0);
+    // const [tbb, setTbb] = useState(0);
+    // const [tca, setTca] = useState(0);
+    // const [ra, setRa] = useState(0);
+    // const [rb, setRb] = useState(0);
+    // const [rc, setRc] = useState(0);
+    // const [rd, setRd] = useState(0);
+    // const [rea, setRea] = useState(0);
+    // const [reb, setReb] = useState(0);
+    // const [rf, setRf] = useState(0);
+    // const [full, setFull] = useState(0);
     const [btn, setBtn] = useState(0);
     const [selected, setSelcted] = useState<'click' | 'unclick'>('unclick');
     const [originData, setOriginData] = useState<SankeyData>(repb);
@@ -243,6 +243,17 @@ export default function FinalSankey() {
                                 style={{ textTransform: 'capitalize' }}
                             >
                                 Geometry
+                            </Button>
+                            <Button
+                                onClick={() => {
+                                    setOriginData(repg);
+                                    setSelcted('click');
+                                    setBtn(8);
+                                }}
+                                variant={btn === 8 ? 'contained' : 'outlined'}
+                                style={{ textTransform: 'capitalize' }}
+                            >
+                                Mechanic
                             </Button>
 
                             <Button

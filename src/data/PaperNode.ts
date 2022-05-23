@@ -9,7 +9,7 @@ export const PaperNode: SankeyData = {
         { name: 'thought', type: 'Target', subtype: '0' },
         { name: 'service', type: 'Target', subtype: '0' },
         { name: 'product', type: 'Target', subtype: '0' },
-        { name: 'event', type: 'Target', subtype: '0' },
+        { name: 'event', type: 'Target', subtype: '0' }, // 7
         { name: 'simple', type: 'Target', subtype: '1' },
         { name: 'composite', type: 'Target', subtype: '1' },
         { name: 'derived', type: 'Target', subtype: '1' },
@@ -41,8 +41,8 @@ export const PaperNode: SankeyData = {
         { name: 'aspect_based_sentiment_analysis', type: 'Intermediation', subtype: '0' },
         { name: 'detection_of_fake_or_deceptive_sentiment_information', type: 'Intermediation', subtype: '0' },
         { name: 'hate_speech', type: 'Intermediation', subtype: '0' },
-        { name: 'opinion_summarization', type: 'Intermediation', subtype: '1' },
-        { name: 'sentiment_information_description_a_multi_aspect', type: 'Intermediation', subtype: '1' },
+        { name: 'opinion_summarization', type: 'Intermediation', subtype: '1' }, // 39
+        { name: 'sentiment_information_description_a_multi_aspect', type: 'Intermediation', subtype: '1' }, // 40
         { name: 'emotion_detection_and_classification', type: 'Intermediation', subtype: '2' },
         { name: 'polarity_classification', type: 'Intermediation', subtype: '2' },
         { name: 'personalized_sentiment_analysis', type: 'Intermediation', subtype: '2' },
