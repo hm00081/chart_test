@@ -15,7 +15,26 @@ import { SankeyLink, SankeyStatus, SankeyLinkExtended } from '../src/types';
 // Data
 import { PaperNode } from './data/PaperNode';
 import { Node, Papers, Status } from './data/AllPaperData';
-import { AllPaperDatas, TargetAAs, TargetABs, TargetBAs, TargetBBs, TargetCAs, RepAs, OriginRepBs, RepBs, RepCs, RepDs, RepEAs, RepEBs, RepFs, RepGs, Emptys } from './data/AllPaperData';
+import {
+    AllPaperDatas,
+    TargetAAs,
+    TargetABs,
+    TargetBAs,
+    TargetBBs,
+    TargetCAs,
+    TargetCBs,
+    RepAs,
+    OriginRepBs,
+    RepBs,
+    RepCs,
+    RepDs,
+    RepEAs,
+    RepEBs,
+    RepFs,
+    RepGs,
+    RepHs,
+    Emptys,
+} from './data/AllPaperData';
 
 //@ts-ignore
 const LinkData = [AllPaperDatas, TargetAAs, TargetABs, TargetBAs, TargetBBs, TargetCAs, RepAs, RepBs, RepCs, RepDs, RepEAs, RepEBs, RepFs, Emptys];
@@ -188,7 +207,7 @@ const targetba: SankeyData = {
                 color = 'greenLinkColor';
             }
         } else {
-            if (link.category === 'TargetBAs') {
+            if (link.category === 'TargetBA') {
                 // category는 현재 아무런 기능이 필요하지 않아보임.
                 if (link.source < 50) {
                     color = 'blueLightLinkColor';
@@ -243,7 +262,7 @@ const targetbb: SankeyData = {
                 color = 'greenLinkColor';
             }
         } else {
-            if (link.category === 'TargetBBs') {
+            if (link.category === 'TargetBB') {
                 // category는 현재 아무런 기능이 필요하지 않아보임.
                 if (link.source < 50) {
                     color = 'blueLightLinkColor';
@@ -320,6 +339,61 @@ const targetca: SankeyData = {
                     if (wantedLink.valueid === 'targetca') {
                         hasLink = true;
                     } else if (wantedLink.valueid && wantedLink.valueid.indexOf('targetca') !== -1) {
+                        hasLink = true;
+                    } else hasLink = false;
+                } else hasLink = false;
+            }
+            return hasLink;
+        }
+    }),
+    //@ts-ignore
+    status: Status[5],
+    positionStatus: 'init',
+};
+
+const targetcb: SankeyData = {
+    nodes: PaperNode.nodes.map((node) => {
+        let color: string = '';
+        color = `hsl(0, 0%, 30%)`;
+
+        return { ...node, color };
+    }),
+    links: TargetCBs.map((link) => {
+        let color: LinkColor = 'grayLinkColor';
+        //@ts-ignore
+        if (hasLinkInGroup(link, TargetCBs)) {
+            if (link.source < 50) {
+                color = 'blueLinkColor';
+            } else if (link.target >= 76 && link.target < 83) {
+                color = 'orangeLinkColor';
+            } else if (link.target > 82 && link.target < 100) {
+                color = 'rubyLinkColor';
+            } else {
+                color = 'greenLinkColor';
+            }
+        } else {
+            if (link.category === 'TargetCB') {
+                // category는 현재 아무런 기능이 필요하지 않아보임.
+                if (link.source < 50) {
+                    color = 'blueLightLinkColor';
+                } else {
+                    color = 'greenLightLinkColor';
+                }
+            } else color = 'grayLinkColor';
+        }
+        return {
+            ...link,
+            color,
+        };
+
+        function hasLinkInGroup(wantedLink: SankeyLinkExtended, linkGroup: SankeyLinkExtended[]) {
+            let hasLink: boolean = false;
+            let color: string = '';
+            for (let i = 0; i < linkGroup.length; i++) {
+                if (wantedLink.sourceNodeYPosition === linkGroup[i].sourceNodeYPosition) {
+                    if (wantedLink.valueid === 'targetcb') {
+                        hasLink = true;
+                    } else if (wantedLink.valueid && wantedLink.valueid.indexOf('targetcb') !== -1) {
                         hasLink = true;
                     } else hasLink = false;
                 } else hasLink = false;
@@ -861,6 +935,71 @@ const repg: SankeyData = {
     positionStatus: 'init',
 };
 
+const reph: SankeyData = {
+    nodes: PaperNode.nodes.map((node) => {
+        let color: string = '';
+        color = `hsl(0, 0%, 30%)`;
+
+        return { ...node, color };
+    }),
+    links: RepHs.map((link) => {
+        let color: LinkColor = 'grayLinkColor';
+        // let status: string = '';
+        //@ts-ignore
+        if (hasLinkInGroup(link, RepHs)) {
+            if (link.source < 50) {
+                color = 'blueLinkColor';
+            } else if (link.target >= 76 && link.target < 83) {
+                color = 'orangeLinkColor';
+            } else if (link.target > 82 && link.target < 100) {
+                color = 'rubyLinkColor';
+            } else {
+                color = 'greenLinkColor';
+            }
+        } else {
+            if (link.category === 'RepH') {
+                // category는 현재 아무런 기능이 필요하지 않아보임.
+                if (link.source < 50) {
+                    color = 'blueLightLinkColor';
+                } else {
+                    color = 'greenLightLinkColor';
+                }
+            } else color = 'grayLinkColor';
+        }
+        return {
+            ...link,
+            color,
+            //, paperIndex:
+        };
+        function hasLinkInGroup(wantedLink: SankeyLinkExtended, linkGroup: SankeyLinkExtended[]) {
+            // const [state, setState] = useState();
+            let hasLink: boolean = false;
+            let color: string = '';
+            for (let i = 0; i < linkGroup.length; i++) {
+                // if (wantedLink.sourceNodeYPosition === linkGroup[i].sourceNodeYPosition && wantedLink.valueid === 'repb') {
+                // 현재 전체 페이퍼에서 작동하는 중.
+                // if (wantedLink.sourceNodeYPosition === linkGroup[i].sourceNodeYPosition && wantedLink.valueid === 'repb') {
+                //     hasLink = true;
+                // } else if (wantedLink.sourceNodeYPosition === linkGroup[i].sourceNodeYPosition && wantedLink.valueid === ['targetca', 'repb']) {
+                //     hasLink = true;
+                // }
+                if (wantedLink.sourceNodeYPosition === linkGroup[i].sourceNodeYPosition) {
+                    if (wantedLink.valueid === 'reph') {
+                        hasLink = true;
+                    } else if (wantedLink.valueid && wantedLink.valueid.indexOf('reph') !== -1) {
+                        hasLink = true;
+                    } else hasLink = false;
+                } else hasLink = false;
+            }
+            return hasLink;
+        }
+    }),
+    //@ts-ignore
+    status: Status[6],
+
+    positionStatus: 'init',
+};
+
 const empty = {
     nodes: PaperNode.nodes.map((node) => {
         let color: string = '';
@@ -874,4 +1013,4 @@ const empty = {
     status: Status[13],
 };
 
-export { basicData, targetaa, targetab, targetba, targetbb, targetca, repa, repb, repc, repd, repea, repeb, repf, repg, empty };
+export { basicData, targetaa, targetab, targetba, targetbb, targetca, targetcb, repa, repb, repc, repd, repea, repeb, repf, repg, reph, empty };

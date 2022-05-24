@@ -212,7 +212,7 @@ const SCS19: SankeyData = {
             source: 54,
             target: 78,
             value: 4,
-            valueid: ['targetcb', 'repa'],
+            valueid: ['targetcb', 'repb'],
         },
         {
             source: 59,

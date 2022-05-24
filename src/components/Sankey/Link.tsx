@@ -11,8 +11,8 @@ import { DragControls } from 'framer-motion';
 
 export const LinkGrayColor: FC = () => (
     <linearGradient id="grayLinkColor">
-        <stop offset="100%" stopColor={'hsl(10, 0%, 85%)'} />
-        <stop offset="100%" stopColor={'hsl(10, 0%, 85%)'} />
+        <stop offset="100%" stopColor={'hsl(10, 0%, 90%)'} />
+        <stop offset="100%" stopColor={'hsl(10, 0%, 90%)'} />
     </linearGradient>
 );
 
@@ -128,10 +128,10 @@ export const Link = ({ link, originData, sourceTargetIdLinksDict, setOriginData 
                                 // redFlag = true;
                                 // renderingLink.color = renderingLink.color = 'blueLinkColor' ? 'blueLinkColor' : 'redLinkColor';
                                 if (renderingLink.target >= 76 && renderingLink.target < 83) renderingLink.color = 'orangeLinkColor';
-                                renderingLink.status = 'selected';
+                                renderingLink.valueid = 'selected';
                                 renderingLink.status = 'selected';
                                 if (renderingLink.target > 82 && renderingLink.target < 100) renderingLink.color = 'rubyLinkColor';
-                                renderingLink.status = 'selected';
+                                renderingLink.valueid = 'selected';
                                 renderingLink.status = 'selected';
                                 if (renderingLink.source >= 100) renderingLink.color = 'greenLinkColor'; //색상 변경 필요하면 변경.
                                 renderingLink.valueid = 'selected';

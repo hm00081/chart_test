@@ -8,11 +8,13 @@ export const ZLW13: SankeyData = {
             source: 137,
             target: 7,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 137,
             target: 11,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 137,
@@ -23,11 +25,13 @@ export const ZLW13: SankeyData = {
             source: 7,
             target: 42,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 11,
             target: 42,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 23,
@@ -38,6 +42,7 @@ export const ZLW13: SankeyData = {
             source: 42,
             target: 55,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 46,
@@ -48,11 +53,13 @@ export const ZLW13: SankeyData = {
             source: 55,
             target: 77,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 55,
             target: 80,
             value: 1,
+            valueid: 'targetca',
         },
         {
             source: 71,

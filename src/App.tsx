@@ -36,7 +36,7 @@ function App() {
             </SankeySize>
             {/* <ParentSize>{({ width, height }) => <StackedBarChart width={width} height={height} />}</ParentSize> */}
             {/* {draw} */}
-            <AllCloud />
+            {/* <AllCloud /> */}
         </>
     );
 }

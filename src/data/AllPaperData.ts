@@ -236,6 +236,8 @@ const PaperStatus = [
     YCC20.status,
 ];
 
+//TODO 유형 추가시 계속 변수 생성하기.
+
 //@ts-ignore
 const test = () => {
     //@ts-ignore
@@ -306,7 +308,7 @@ const Emptys = [].concat.apply([], Empty).reduce((result, value) => {
 //@ts-ignore
 const AllPaperDatas = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((ApllPaperDatas, onePaper) => {
     //@ts-ignore
-    const allOnePaper = ApllPaperDatas.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const allOnePaper = ApllPaperDatas.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
     //@ts-ignore
     if (!allOnePaper) ApllPaperDatas.push({ source: onePaper.source, target: onePaper.target, value: onePaper.value });
     //@ts-ignore
@@ -317,7 +319,7 @@ const AllPaperDatas = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<
 //@ts-ignore
 const TargetAAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetAAs, onePaper) => {
     //@ts-ignore
-    const targetaaOnePaper = TargetAAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const targetaaOnePaper = TargetAAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!targetaaOnePaper) {
         //@ts-ignore
@@ -338,7 +340,7 @@ const TargetAAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<Sank
 //@ts-ignore
 const TargetABs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetABs, onePaper) => {
     //@ts-ignore
-    const targetabOnePaper = TargetABs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const targetabOnePaper = TargetABs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!targetabOnePaper) {
         //@ts-ignore
@@ -359,7 +361,7 @@ const TargetABs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<Sank
 //@ts-ignore
 const TargetBAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetBAs, onePaper) => {
     //@ts-ignore
-    const targetbaOnePaper = TargetBAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const targetbaOnePaper = TargetBAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!targetbaOnePaper) {
         //@ts-ignore
@@ -380,7 +382,7 @@ const TargetBAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<Sank
 //@ts-ignore
 const TargetBBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetBBs, onePaper) => {
     //@ts-ignore
-    const targetbbOnePaper = TargetBBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const targetbbOnePaper = TargetBBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!targetbbOnePaper) {
         //@ts-ignore
@@ -395,13 +397,13 @@ const TargetBBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<Sank
     } else {
         targetbbOnePaper.value += 1;
     }
-    return TargetBAs;
+    return TargetBBs;
 }, []);
 
 //@ts-ignore
 const TargetCAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetCAs, onePaper) => {
     //@ts-ignore
-    const targetcaOnePaper = TargetCAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const targetcaOnePaper = TargetCAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!targetcaOnePaper) {
         //@ts-ignore
@@ -420,9 +422,30 @@ const TargetCAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<Sank
 }, []);
 
 //@ts-ignore
+const TargetCBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((TargetCBs, onePaper) => {
+    //@ts-ignore
+    const targetcbOnePaper = TargetCBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
+
+    if (!targetcbOnePaper) {
+        //@ts-ignore
+        TargetCBs.push({
+            source: onePaper.source,
+            target: onePaper.target,
+            value: onePaper.value,
+            valueid: onePaper.valueid,
+            paperName: onePaper.paperName,
+            id: onePaper.id,
+        });
+    } else {
+        targetcbOnePaper.value += 1;
+    }
+    return TargetCBs;
+}, []);
+
+//@ts-ignore
 const RepAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepAs, onePaper) => {
     //@ts-ignore
-    const repaOnePaper = RepAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repaOnePaper = RepAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repaOnePaper) {
         //@ts-ignore
@@ -443,7 +466,7 @@ const RepAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLi
 //@ts-ignore
 const RepBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepBs, onePaper) => {
     // @ts-ignore
-    const repbOnePaper = RepBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repbOnePaper = RepBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
     // const repbOnePaper = RepBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && (r.valueid === onePaper.valueid) === 'repb');
     // const repb = result.find((r) => r.source === value.source && r.target === value.target && r.valueid === 'repb'); //흐름 보이는데 이건 절대아님.
     //@ts-ignore
@@ -485,7 +508,7 @@ const OriginRepBs: SankeyLinkExtended[] = [].concat.apply([], PaperString).reduc
 //@ts-ignore
 const RepCs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepCs, onePaper) => {
     //@ts-ignore
-    const repcOnePaper = RepCs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repcOnePaper = RepCs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repcOnePaper) {
         //@ts-ignore
@@ -506,7 +529,7 @@ const RepCs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLi
 //@ts-ignore
 const RepDs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepDs, onePaper) => {
     //@ts-ignore
-    const repdOnePaper = RepDs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repdOnePaper = RepDs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repdOnePaper) {
         //@ts-ignore
@@ -527,7 +550,7 @@ const RepDs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLi
 //@ts-ignore
 const RepEAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepEAs, onePaper) => {
     //@ts-ignore
-    const repeaOnePaper = RepEAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repeaOnePaper = RepEAs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repeaOnePaper) {
         //@ts-ignore
@@ -548,7 +571,7 @@ const RepEAs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyL
 //@ts-ignore
 const RepEBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepEBs, onePaper) => {
     //@ts-ignore
-    const repebOnePaper = RepEBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repebOnePaper = RepEBs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repebOnePaper) {
         //@ts-ignore
@@ -569,7 +592,7 @@ const RepEBs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyL
 //@ts-ignore
 const RepFs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepFs, onePaper) => {
     //@ts-ignore
-    const repfOnePaper = RepFs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repfOnePaper = RepFs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repfOnePaper) {
         //@ts-ignore
@@ -590,7 +613,7 @@ const RepFs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLi
 //@ts-ignore
 const RepGs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepGs, onePaper) => {
     //@ts-ignore
-    const repgOnePaper = RepGs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value);
+    const repgOnePaper = RepGs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
 
     if (!repgOnePaper) {
         //@ts-ignore
@@ -609,10 +632,31 @@ const RepGs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLi
 }, []);
 
 //@ts-ignore
+const RepHs = ([].concat.apply([], PaperString) as SankeyLink[]).reduce<SankeyLinkExtended[]>((RepHs, onePaper) => {
+    //@ts-ignore
+    const rephOnePaper = RepHs.find((r) => r.source === onePaper.source && r.target === onePaper.target && r.value === onePaper.value && r.valueid === onePaper.valueid);
+
+    if (!rephOnePaper) {
+        //@ts-ignore
+        RepHs.push({
+            source: onePaper.source,
+            target: onePaper.target,
+            value: onePaper.value,
+            valueid: onePaper.valueid,
+            paperName: onePaper.paperName,
+            id: onePaper.id,
+        });
+    } else {
+        rephOnePaper.value += 1;
+    }
+    return RepHs;
+}, []);
+
+//@ts-ignore
 const Node = CAA20.nodes;
 // const LinkData = [AllPaperDatas, TargetAAs, TargetABs, TargetBAs, TargetBBs, TargetCAs, RepAs, RepBs, RepCs, RepDs, RepEAs, RepEBs, RepFs, Emptys];
 
-export { Status, Node, Papers, AllPaperDatas, TargetAAs, TargetABs, TargetBAs, TargetBBs, TargetCAs, RepAs, RepBs, OriginRepBs, RepCs, RepDs, RepEAs, RepEBs, RepFs, RepGs, Emptys };
+export { Status, Node, Papers, AllPaperDatas, TargetAAs, TargetABs, TargetBAs, TargetBBs, TargetCAs, TargetCBs, RepAs, RepBs, OriginRepBs, RepCs, RepDs, RepEAs, RepEBs, RepFs, RepGs, RepHs, Emptys };
 
 // links: AllPaperDatas.map((link) => {
 //     let color: string = '';

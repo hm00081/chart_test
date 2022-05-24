@@ -12,9 +12,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Data & Hooks
 import { useState, useEffect, useRef, useReducer } from 'react';
-import { basicData, targetaa, targetab, targetba, targetbb, targetca, repa, repb, repc, repd, repea, repeb, repf, repg, empty } from './Data';
+import { basicData, targetaa, targetab, targetba, targetbb, targetca, targetcb, repa, repb, repc, repd, repea, repeb, repf, repg, reph, empty } from './Data';
 import { SankeyData, SankeyLinkExtended, SankeyNodeExtended, SankeyLink } from './types';
 import { ButtonGroup } from '@mui/material';
+import { RepHs } from './data/AllPaperData';
 const FinalSankeys = styled.div`
     margin-top: 50px;
 `;
@@ -30,7 +31,7 @@ const FinalSankeys = styled.div`
 // `;
 
 const Menu = styled.div`
-    position: relative;
+    // position: relative;
     font-size: 2em;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -39,7 +40,10 @@ const Menu = styled.div`
     justify-content: space-between;
 `;
 
-const SecButtonPos = styled.div``;
+const SecButtonPos = styled.div`
+    display: inline-block;
+    margin-left: 12em;
+`;
 
 interface PaletteColor {
     light?: string;
@@ -162,6 +166,17 @@ export default function FinalSankey() {
                         >
                             Opinion on a Specific Event
                         </Button>
+                        <Button
+                            onClick={() => {
+                                setOriginData(targetcb);
+                                setSelcted('click');
+                                setBtn(16);
+                            }}
+                            variant={btn === 16 ? 'contained' : 'outlined'}
+                            style={{ textTransform: 'capitalize' }}
+                        >
+                            Diffusion of Sentiment
+                        </Button>
                     </ButtonGroup>
                     <SecButtonPos>
                         <Menu>Representation Theme</Menu>
@@ -254,6 +269,17 @@ export default function FinalSankey() {
                                 style={{ textTransform: 'capitalize' }}
                             >
                                 Mechanic
+                            </Button>
+                            <Button
+                                onClick={() => {
+                                    setOriginData(reph);
+                                    setSelcted('click');
+                                    setBtn(14);
+                                }}
+                                variant={btn === 14 ? 'contained' : 'outlined'}
+                                style={{ textTransform: 'capitalize' }}
+                            >
+                                Decorative Pattern
                             </Button>
 
                             <Button

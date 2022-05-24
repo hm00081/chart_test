@@ -8,7 +8,7 @@ const LJC18: SankeyData = {
             source: 116,
             target: 3,
             value: 1,
-            valueid: 'repa',
+            valueid: ['repa', 'reph'],
         },
         {
             source: 116,
@@ -86,7 +86,7 @@ const LJC18: SankeyData = {
             source: 3,
             target: 49,
             value: 1,
-            valueid: 'repa',
+            valueid: ['repa', 'reph'],
         },
         {
             source: 11,
@@ -134,7 +134,7 @@ const LJC18: SankeyData = {
             source: 49,
             target: 62,
             value: 1,
-            valueid: 'repa',
+            valueid: ['repa', 'reph'],
         },
         {
             source: 49,
@@ -152,7 +152,7 @@ const LJC18: SankeyData = {
             source: 62,
             target: 88,
             value: 1,
-            valueid: 'repa',
+            valueid: ['repa', 'reph'],
         },
         {
             source: 63,
@@ -182,7 +182,7 @@ const LJC18: SankeyData = {
             source: 62,
             target: 99,
             value: 1,
-            valueid: 'repa',
+            valueid: ['repa', 'reph'],
         },
         {
             source: 63,

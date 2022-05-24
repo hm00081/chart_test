@@ -56,7 +56,7 @@ export const PaperNode: SankeyData = {
         { name: 'human', type: 'Representation', subtype: '0' },
         { name: 'animal', type: 'Representation', subtype: '0' },
         { name: 'plant', type: 'Representation', subtype: '0' },
-        { name: 'landscape', type: 'Representation', subtype: '0' },
+        { name: 'landscape', type: 'Representation', subtype: '0' }, // 54
         { name: 'compound', type: 'Representation', subtype: '0' },
         { name: 'metal', type: 'Representation', subtype: '0' },
         { name: 'nonmetal', type: 'Representation', subtype: '0' },
@@ -64,7 +64,7 @@ export const PaperNode: SankeyData = {
         { name: 'building&structure', type: 'Representation', subtype: '1' }, // 59 (바퀴)
         { name: 'geometry', type: 'Representation', subtype: '1' },
         { name: 'picture', type: 'Representation', subtype: '1' },
-        { name: 'pattern', type: 'Representation', subtype: '1' },
+        { name: 'pattern', type: 'Representation', subtype: '1' }, // 62
         { name: 'map', type: 'Representation', subtype: '1' },
         { name: 'fiber', type: 'Representation', subtype: '1' },
         { name: 'food', type: 'Representation', subtype: '1' },
@@ -80,7 +80,7 @@ export const PaperNode: SankeyData = {
         { name: 'creation_and_destruction', type: 'Representation', subtype: '3' }, // 75
         { name: 'value', type: 'Vis_var&tech', subtype: '0' }, // 76
         { name: 'color', type: 'Vis_var&tech', subtype: '0' }, // 77
-        { name: 'size', type: 'Vis_var&tech', subtype: '0' },
+        { name: 'size', type: 'Vis_var&tech', subtype: '0' }, // 78
         { name: 'shape', type: 'Vis_var&tech', subtype: '0' }, // 79
         { name: 'position', type: 'Vis_var&tech', subtype: '0' },
         { name: 'orientation', type: 'Vis_var&tech', subtype: '0' },
@@ -113,8 +113,8 @@ export const PaperNode: SankeyData = {
         { name: 'GGS12ST', type: 'Paper' },
         { name: 'GGS12TPS', type: 'Paper' },
         { name: 'HYZ13', type: 'Paper' }, // 110
-        { name: 'JTM11', type: 'Paper' },
-        { name: 'JSM16', type: 'Paper' },
+        { name: 'JTM11', type: 'Paper' }, // 111
+        { name: 'JSM16', type: 'Paper' }, // 112
         { name: 'JX17', type: 'Paper' },
         { name: 'KSBK15', type: 'Paper' }, // 114
         { name: 'LGX16', type: 'Paper' }, // 115
