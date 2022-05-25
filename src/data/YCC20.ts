@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const YCC20: SankeyData = {
+const YCC20: SankeyData = {
     nodes: [],
 
     links: [
@@ -167,3 +167,10 @@ export const YCC20: SankeyData = {
         },
     ],
 };
+
+YCC20.links.forEach((link, index) => {
+    link.paperName = 'YCC20';
+    link.id = `YCC20-${index}`;
+});
+
+export { YCC20 };

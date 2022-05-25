@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const FCF09: SankeyData = {
+const FCF09: SankeyData = {
     nodes: [],
 
     links: [
@@ -140,3 +140,10 @@ export const FCF09: SankeyData = {
         },
     ],
 };
+
+FCF09.links.forEach((link, index) => {
+    link.paperName = 'FCF09';
+    link.id = `FCF09-${index}`;
+});
+
+export { FCF09 };

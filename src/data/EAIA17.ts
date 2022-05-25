@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const EAIA17: SankeyData = {
+const EAIA17: SankeyData = {
     nodes: [],
 
     links: [
@@ -143,3 +143,10 @@ export const EAIA17: SankeyData = {
         },
     ],
 };
+
+EAIA17.links.forEach((link, index) => {
+    link.paperName = 'EAIA17';
+    link.id = `EAIA17-${index}`;
+});
+
+export { EAIA17 };

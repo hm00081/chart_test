@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const MWSO08: SankeyData = {
+const MWSO08: SankeyData = {
     nodes: [],
 
     links: [
@@ -104,3 +104,10 @@ export const MWSO08: SankeyData = {
         },
     ],
 };
+
+MWSO08.links.forEach((link, index) => {
+    link.paperName = 'MWSO08';
+    link.id = `MWSO08-${index}`;
+});
+
+export { MWSO08 };

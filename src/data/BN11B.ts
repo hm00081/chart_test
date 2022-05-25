@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const BN11B: SankeyData = {
+const BN11B: SankeyData = {
     nodes: [],
 
     links: [
@@ -108,3 +108,10 @@ export const BN11B: SankeyData = {
         },
     ],
 };
+
+BN11B.links.forEach((link, index) => {
+    link.paperName = 'BN11B';
+    link.id = `BN11B-${index}`;
+});
+
+export { BN11B };

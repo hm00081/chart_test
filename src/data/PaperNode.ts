@@ -94,7 +94,7 @@ export const PaperNode: SankeyData = {
         { name: 'pie_chart', type: 'Vis_var&tech', subtype: '1' },
         { name: 'radar_chart', type: 'Vis_var&tech', subtype: '1' },
         { name: 'tree_map', type: 'Vis_var&tech', subtype: '1' },
-        { name: 'text_cloud', type: 'Vis_var&tech', subtype: '1' },
+        { name: 'tag_cloud', type: 'Vis_var&tech', subtype: '1' }, // 이름 수정
         { name: 'heatmap', type: 'Vis_var&tech', subtype: '1' },
         { name: 'scatter_plot', type: 'Vis_var&tech', subtype: '1' },
         { name: 'mds_map', type: 'Vis_var&tech', subtype: '1' },

@@ -31,7 +31,8 @@ const FinalSankeys = styled.div`
 // `;
 
 const Menu = styled.div`
-    // position: relative;
+    position: relative;
+    display: block;
     font-size: 2em;
     padding-bottom: 10px;
     margin-top: 10px;
@@ -43,6 +44,7 @@ const Menu = styled.div`
 const SecButtonPos = styled.div`
     display: inline-block;
     margin-left: 12em;
+    margin-top: -55px;
 `;
 
 interface PaletteColor {
@@ -268,7 +270,7 @@ export default function FinalSankey() {
                                 variant={btn === 8 ? 'contained' : 'outlined'}
                                 style={{ textTransform: 'capitalize' }}
                             >
-                                Mechanic
+                                Machine
                             </Button>
                             <Button
                                 onClick={() => {

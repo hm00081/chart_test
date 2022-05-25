@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const XD99: SankeyData = {
+const XD99: SankeyData = {
     nodes: [],
 
     links: [
@@ -137,3 +137,10 @@ export const XD99: SankeyData = {
         },
     ],
 };
+
+XD99.links.forEach((link, index) => {
+    link.paperName = 'XD99';
+    link.id = `XD99-${index}`;
+});
+
+export { XD99 };

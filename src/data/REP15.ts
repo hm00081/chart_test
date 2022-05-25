@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const REP15: SankeyData = {
+const REP15: SankeyData = {
     nodes: [],
 
     links: [
@@ -83,3 +83,10 @@ export const REP15: SankeyData = {
         },
     ],
 };
+
+REP15.links.forEach((link, index) => {
+    link.paperName = 'REP15';
+    link.id = `REP15-${index}`;
+});
+
+export { REP15 };

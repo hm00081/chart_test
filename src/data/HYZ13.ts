@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const HYZ13: SankeyData = {
+const HYZ13: SankeyData = {
     nodes: [],
 
     links: [
@@ -134,3 +134,10 @@ export const HYZ13: SankeyData = {
         },
     ],
 };
+
+HYZ13.links.forEach((link, index) => {
+    link.paperName = 'HYZ13';
+    link.id = `HYZ13-${index}`;
+});
+
+export { HYZ13 };

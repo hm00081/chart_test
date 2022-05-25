@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const PC15PV: SankeyData = {
+const PC15PV: SankeyData = {
     nodes: [],
 
     links: [
@@ -137,3 +137,10 @@ export const PC15PV: SankeyData = {
         },
     ],
 };
+
+PC15PV.links.forEach((link, index) => {
+    link.paperName = 'PC15PV';
+    link.id = `PC15PV-${index}`;
+});
+
+export { PC15PV };

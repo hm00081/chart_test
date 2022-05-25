@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const XWL17: SankeyData = {
+const XWL17: SankeyData = {
     nodes: [],
 
     links: [
@@ -83,3 +83,10 @@ export const XWL17: SankeyData = {
         },
     ],
 };
+
+XWL17.links.forEach((link, index) => {
+    link.paperName = 'XWL17';
+    link.id = `XWL17-${index}`;
+});
+
+export { XWL17 };

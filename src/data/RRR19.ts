@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const RRR19: SankeyData = {
+const RRR19: SankeyData = {
     nodes: [],
 
     links: [
@@ -155,3 +155,10 @@ export const RRR19: SankeyData = {
         },
     ],
 };
+
+RRR19.links.forEach((link, index) => {
+    link.paperName = 'RRR19';
+    link.id = `RRR19-${index}`;
+});
+
+export { RRR19 };

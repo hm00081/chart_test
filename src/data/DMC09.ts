@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const DMC09: SankeyData = {
+const DMC09: SankeyData = {
     nodes: [],
 
     links: [
@@ -71,3 +71,10 @@ export const DMC09: SankeyData = {
         },
     ],
 };
+
+DMC09.links.forEach((link, index) => {
+    link.paperName = 'DMC09';
+    link.id = `DMC09-${index}`;
+});
+
+export { DMC09 };

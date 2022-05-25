@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const LWW13: SankeyData = {
+const LWW13: SankeyData = {
     nodes: [],
 
     links: [
@@ -183,3 +183,10 @@ export const LWW13: SankeyData = {
         },
     ],
 };
+
+LWW13.links.forEach((link, index) => {
+    link.paperName = 'LWW13';
+    link.id = `LWW13-${index}`;
+});
+
+export { LWW13 };

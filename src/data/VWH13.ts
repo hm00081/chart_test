@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const VWH13: SankeyData = {
+const VWH13: SankeyData = {
     nodes: [],
 
     links: [
@@ -252,3 +252,10 @@ export const VWH13: SankeyData = {
         },
     ],
 };
+
+VWH13.links.forEach((link, index) => {
+    link.paperName = 'VWH13';
+    link.id = `VWH13-${index}`;
+});
+
+export { VWH13 };

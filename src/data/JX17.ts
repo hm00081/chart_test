@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const JX17: SankeyData = {
+const JX17: SankeyData = {
     nodes: [],
 
     links: [
@@ -239,3 +239,10 @@ export const JX17: SankeyData = {
         },
     ],
 };
+
+JX17.links.forEach((link, index) => {
+    link.paperName = 'JX17';
+    link.id = `JX17-${index}`;
+});
+
+export { JX17 };

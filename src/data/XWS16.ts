@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const XWS16: SankeyData = {
+const XWS16: SankeyData = {
     nodes: [],
 
     links: [
@@ -195,3 +195,10 @@ export const XWS16: SankeyData = {
         },
     ],
 };
+
+XWS16.links.forEach((link, index) => {
+    link.paperName = 'XWS16';
+    link.id = `XWS16-${index}`;
+});
+
+export { XWS16 };

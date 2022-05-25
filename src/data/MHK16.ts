@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const MHK16: SankeyData = {
+const MHK16: SankeyData = {
     nodes: [],
 
     links: [
@@ -110,3 +110,10 @@ export const MHK16: SankeyData = {
         },
     ],
 };
+
+MHK16.links.forEach((link, index) => {
+    link.paperName = 'MHK16';
+    link.id = `MHK16-${index}`;
+});
+
+export { MHK16 };

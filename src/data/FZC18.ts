@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const FZC18: SankeyData = {
+const FZC18: SankeyData = {
     nodes: [],
 
     links: [
@@ -212,3 +212,10 @@ export const FZC18: SankeyData = {
         },
     ],
 };
+
+FZC18.links.forEach((link, index) => {
+    link.paperName = 'FZC18';
+    link.id = `FZC18-${index}`;
+});
+
+export { FZC18 };

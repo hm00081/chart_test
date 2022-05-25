@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const ZLW13: SankeyData = {
+const ZLW13: SankeyData = {
     nodes: [],
 
     links: [
@@ -73,3 +73,10 @@ export const ZLW13: SankeyData = {
         },
     ],
 };
+
+ZLW13.links.forEach((link, index) => {
+    link.paperName = 'ZLW13';
+    link.id = `ZLW13-${index}`;
+});
+
+export { ZLW13 };

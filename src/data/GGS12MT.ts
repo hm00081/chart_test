@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const GGS12MT: SankeyData = {
+const GGS12MT: SankeyData = {
     nodes: [],
 
     links: [
@@ -116,3 +116,10 @@ export const GGS12MT: SankeyData = {
         },
     ],
 };
+
+GGS12MT.links.forEach((link, index) => {
+    link.paperName = 'GGS12MT';
+    link.id = `GGS12MT-${index}`;
+});
+
+export { GGS12MT };

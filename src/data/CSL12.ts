@@ -1,6 +1,6 @@
 import { SankeyData } from '../types/sankey';
 
-export const CSL12: SankeyData = {
+const CSL12: SankeyData = {
     nodes: [],
 
     links: [
@@ -233,3 +233,10 @@ export const CSL12: SankeyData = {
         },
     ],
 };
+
+CSL12.links.forEach((link, index) => {
+    link.paperName = 'CSL12';
+    link.id = `CSL12-${index}`;
+});
+
+export { CSL12 };
