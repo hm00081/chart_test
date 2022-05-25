@@ -163,7 +163,7 @@ export const Link = ({ link, originData, sourceTargetIdLinksDict, setOriginData 
 function findFrontLinks(arg: { linkPart: SankeyLink; renderingData: SankeyData }) {
     const { linkPart, renderingData } = arg;
     const frontLinks = renderingData.links.filter((renderingLink) => {
-        if (renderingLink.target === linkPart.source && renderingLink.paperName === linkPart.paperName) {
+        if (renderingLink.target === linkPart.source && renderingLink.paperName === linkPart.paperName && renderingLink.valueid === linkPart.valueid) {
             if ((renderingLink.color = 'blueLinkColor')) renderingLink.color = 'blueLinkColor';
             renderingLink.valueid = 'selected';
             renderingLink.status = 'selected';
@@ -197,7 +197,7 @@ function findFrontLinks(arg: { linkPart: SankeyLink; renderingData: SankeyData }
 function findBackLinks(arg: { linkPart: SankeyLink; renderingData: SankeyData }) {
     const { linkPart, renderingData } = arg;
     const backLinks = renderingData.links.filter((renderingLink) => {
-        if (renderingLink.source === linkPart.target && renderingLink.paperName === linkPart.paperName) {
+        if (renderingLink.source === linkPart.target && renderingLink.paperName === linkPart.paperName && renderingLink.valueid === linkPart.valueid) {
             if (renderingLink.source < 50) renderingLink.color = 'blueLinkColor';
             renderingLink.valueid = 'selected';
             renderingLink.status = 'selected';
